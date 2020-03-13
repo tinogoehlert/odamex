@@ -1187,6 +1187,7 @@ ISDL20Window::ISDL20Window(uint16_t width, uint16_t height, uint8_t bpp, bool fu
 	else
 		window_flags |= SDL_WINDOW_RESIZABLE;
 
+	window_flags |= SDL_WINDOW_ALLOW_HIGHDPI;
 	mSDLWindow = SDL_CreateWindow(
 			"",			// Empty title for now - it will be set later
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
