@@ -502,6 +502,7 @@ static std::string BaseFileSearch(std::string file, std::string ext = "", std::s
 	D_AddSearchDir(dirs, getenv("DOOMWADDIR"), separator);
 	D_AddSearchDir(dirs, getenv("DOOMWADPATH"), separator);
 	D_AddSearchDir(dirs, getenv("HOME"), separator);
+	D_AddSearchDir(dirs, "wads", separator);
 
 	//[cSc] Add cl_waddownloaddir as default path
 	D_AddSearchDir(dirs, cl_waddownloaddir.cstring(), separator);

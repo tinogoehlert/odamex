@@ -252,8 +252,10 @@ if(SDL_VERSION)
       TARGET odamex
       POST_BUILD
       COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/odamex.app/Contents/Resources
+      COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/odamex.app/Contents/MacOS/wads
       COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/media/${MACOSX_BUNDLE_ICON_FILE} ${CMAKE_CURRENT_BINARY_DIR}/odamex.app/Contents/Resources
       COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/odamex.wad ${CMAKE_CURRENT_BINARY_DIR}/odamex.app/Contents/MacOS
+      COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/freedoom/freedoom1.wad ${CMAKE_CURRENT_BINARY_DIR}/odamex.app/Contents/MacOS/wads
     )
 
     set_directory_properties(
